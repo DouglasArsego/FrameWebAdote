@@ -5,8 +5,6 @@ const DogProfileModal = ({ dog }) => {
 
   return (
     <div className="dog-profile-modal" id={`dog-${dog.id}`} role="dialog" aria-modal="true">
-      {/* Background overlay click closes the modal */}
-      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a href="#" className="modal-backdrop-link" aria-label="Fechar Modal"></a>
       
       <div className="modal-dialog modal-dialog-centered modal-lg">
@@ -15,7 +13,6 @@ const DogProfileModal = ({ dog }) => {
             <h4 className="modal-title fw-bold d-flex align-items-center gap-2 mb-0">
               <i className="bi bi-heart-pulse-fill fs-3 text-danger animate-pulse"></i> Perfil de {dog.name}
             </h4>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#" className="btn-close btn-close-white shadow-none position-absolute top-50 end-0 translate-middle-y me-4" aria-label="Close"></a>
           </div>
           
@@ -87,7 +84,6 @@ const DogProfileModal = ({ dog }) => {
                 </div>
 
                 <div className="d-flex gap-3 justify-content-end">
-                  {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                   <a href="#" className="btn btn-outline-light px-4 py-2 fw-semibold rounded-3 text-decoration-none">
                     Voltar
                   </a>
