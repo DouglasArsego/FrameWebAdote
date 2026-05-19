@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fcf8f5;
+  color: #33272a;
+}
+
+/* Navbar Customização */
+.navbar-custom {
+  background-color: #ff8ba7 !important;
+  box-shadow: 0 4px 12px rgba(255, 139, 167, 0.2);
+}
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #ffffff !important;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #ff8ba7 0%, #ffc6c7 100%);
+  color: #33272a;
+  padding: 5rem 1rem;
+  border-radius: 0 0 40px 40px;
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 25px rgba(255, 139, 167, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 3rem;
+  color: #2b1c1f;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin: 0 auto;
+  color: #4a373b;
+  font-weight: 400;
+}
+
+/* Dog Card Customização */
+.dog-card {
+  border: none;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: #ffffff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 139, 167, 0.25);
+}
+
+.dog-img-container {
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f4eae6;
+}
+
+.dog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.dog-card:hover .dog-img {
+  transform: scale(1.05);
+}
+
+.badge-custom {
+  background-color: #faeee7;
+  color: #ff8ba7;
+  border: 1px solid #ffc6c7;
+  font-weight: 600;
+  padding: 0.5em 0.8em;
+  border-radius: 50rem;
+}
+
+.btn-custom {
+  background-color: #ff8ba7;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+  background-color: #e6738f;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+  color: #ff8ba7;
+  border: 2px solid #ff8ba7;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-custom:hover {
+  background-color: #ff8ba7;
+  color: #ffffff;
+}
+
+
+/* Footer Customização */
+.footer-custom {
+  background-color: #33272a;
+  color: #faeee7;
+  padding: 4rem 0 2rem;
+  margin-top: 6rem;
+}
+
+/* Filtros por Rádio no CSS */
+.filter-label {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50rem;
+  background-color: #ffffff;
+  color: #4a373b;
+  border: 2px solid #faeee7;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+  font-size: 0.9rem;
+}
+
+.filter-label:hover {
+  background-color: #faeee7;
+  color: #ff8ba7;
+  border-color: #ffc6c7;
+}
+
+/* Regras de Active via Rádio selecionado */
+#size-all:checked ~ main .size-all-label,
+#size-pequeno:checked ~ main .size-pequeno-label,
+#size-medio:checked ~ main .size-medio-label,
+#size-grande:checked ~ main .size-grande-label,
+#gender-all:checked ~ main .gender-all-label,
+#gender-macho:checked ~ main .gender-macho-label,
+#gender-femea:checked ~ main .gender-femea-label,
+#age-all:checked ~ main .age-all-label,
+#age-filhote:checked ~ main .age-filhote-label,
+#age-adulto:checked ~ main .age-adulto-label {
+  background-color: #ff8ba7 !important;
+  color: #ffffff !important;
+  border-color: #ff8ba7 !important;
+  box-shadow: 0 4px 10px rgba(255, 139, 167, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Lógica de Ocultação de Cards pelos filtros combinados */
+#size-pequeno:checked ~ main .dog-card-container:not(.size-pequeno),
+#size-medio:checked ~ main .dog-card-container:not(.size-medio),
+#size-grande:checked ~ main .dog-card-container:not(.size-grande) {
+  display: none !important;
+}
+
+#gender-macho:checked ~ main .dog-card-container:not(.gender-macho),
+#gender-femea:checked ~ main .dog-card-container:not(.gender-femea) {
+  display: none !important;
+}
+
+#age-filhote:checked ~ main .dog-card-container:not(.age-filhote),
+#age-adulto:checked ~ main .dog-card-container:not(.age-adulto) {
+  display: none !important;
+}
+
+/* Modal de Perfil - Estilos Premium com CSS e :target */
+.dog-profile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1050;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  outline: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Quando o modal é o target da URL hash, exibe-o */
+.dog-profile-modal:target {
+  display: flex;
+  opacity: 1;
+}
+
+/* Backdrop escuro com desfoque de fundo */
+.modal-backdrop-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 39, 42, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: -1;
+  cursor: default;
+}
+
+/* Customização interna do modal */
+.dog-profile-modal .modal-dialog {
+  width: 100%;
+  max-width: 800px;
+  margin: 1.75rem;
+  pointer-events: auto;
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.dog-profile-modal .modal-content {
+  background-color: #33272a !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.profile-badge {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  font-weight: 500;
+}
+
+.profile-care-box {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.dog-profile-modal:target .modal-dialog {
+  transform: scale(1);
+}
+
+.dog-profile-img-container {
+  height: 280px;
+  background-color: #f4eae6;
+}
+
+.dog-profile-img-container img {
+  object-position: center;
+}
+
+/* Ajustes de animações e utilidades adicionais */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+.animate-pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+.fs-7 {
+  font-size: 0.85rem !important;
+}
+

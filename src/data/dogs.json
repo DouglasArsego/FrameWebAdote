@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "Max",
+    "breed": "Golden Retriever",
+    "age": "2 anos",
+    "gender": "Macho",
+    "size": "Grande",
+    "image": "/images/max.png",
+    "description": "Max é um cão extremamente dócil, inteligente e cheio de energia. Adora correr no parque e pegar bolinhas. É ideal para famílias com crianças e espaço quintal.",
+    "temperament": ["Brincalhão", "Dócil", "Energético"],
+    "vaccinated": true,
+    "neutered": true
+  },
+  {
+    "id": 2,
+    "name": "Luna",
+    "breed": "Beagle",
+    "age": "1 ano",
+    "gender": "Fêmea",
+    "size": "Médio",
+    "image": "/images/luna.png",
+    "description": "Luna é uma filhote muito curiosa, afetuosa e sociável. Gasta horas explorando novos cheiros e adora dormir em almofadas fofas. Muito carinhosa com todos.",
+    "temperament": ["Curiosa", "Carinhosa", "Exploradora"],
+    "vaccinated": true,
+    "neutered": true
+  },
+  {
+    "id": 3,
+    "name": "Thor",
+    "breed": "Pastor Alemão",
+    "age": "3 anos",
+    "gender": "Macho",
+    "size": "Grande",
+    "image": "/images/thor.png",
+    "description": "Thor é um cão leal, atento e protetor. Possui excelente adestramento básico e se apega profundamente aos seus tutores. Procura um lar amoroso e dedicado.",
+    "temperament": ["Leal", "Protetor", "Inteligente"],
+    "vaccinated": true,
+    "neutered": false
+  },
+  {
+    "id": 4,
+    "name": "Bella",
+    "breed": "SRD / Vira-lata Caramelo",
+    "age": "8 meses",
+    "gender": "Fêmea",
+    "size": "Médio",
+    "image": "/images/bella.png",
+    "description": "Bella é o clássico e irresistível vira-lata caramelo brasileiro. Tem um olhar meigo, é super adaptável, companheira e se dá bem com outros animais e pessoas de todas as idades.",
+    "temperament": ["Companheira", "Meiga", "Adaptável"],
+    "vaccinated": true,
+    "neutered": true
+  }
+]
